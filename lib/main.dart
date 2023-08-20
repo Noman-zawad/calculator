@@ -15,6 +15,7 @@ class CalculatorApp extends StatelessWidget {
         primarySwatch: Colors.blue,
       ),
       home: CalculatorScreen(),
+      debugShowCheckedModeBanner: false,
     );
   }
 }

@@ -26,145 +26,153 @@ class _CalculatorScreenState extends State<CalculatorScreen> {
 
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-      // ... (other scaffold properties)
-      body: Column(
-        children: [
-          // ... (other calculator UI elements)
-          Column(
-            children: [
-              Row(
-                children: [
-                  CalculatorButton(
-                      text: 'v',
-                      textColor: Colors.black,
-                      onPressed: _onButtonPressed),
-                  CalculatorButton(
-                      text: 'c',
-                      textColor: Colors.red,
-                      onPressed: _onClearPressed),
-                  CalculatorButton(
-                      text: 'x',
-                      textColor: Colors.black,
-                      onPressed: _onButtonPressed),
-                  CalculatorButton(
-                      text: '/',
-                      textColor: Colors.black,
-                      onPressed: _onButtonPressed),
-                ],
-              ),
-              Row(
-                children: [
-                  CalculatorButton(
-                      text: '(',
-                      textColor: Colors.black,
-                      onPressed: _onButtonPressed),
-                  CalculatorButton(
-                      text: ')',
-                      textColor: Colors.black,
-                      onPressed: _onButtonPressed),
-                  CalculatorButton(
-                      text: '%',
-                      textColor: Colors.black,
-                      onPressed: _onButtonPressed),
-                  CalculatorButton(
-                      text: '*',
-                      textColor: Colors.black,
-                      onPressed: _onButtonPressed),
-                ],
-              ),
-              Row(
-                children: [
-                  CalculatorButton(
-                      text: '1',
-                      textColor: Colors.black,
-                      onPressed: _onButtonPressed),
-                  CalculatorButton(
-                      text: '2',
-                      textColor: Colors.black,
-                      onPressed: _onButtonPressed),
-                  CalculatorButton(
-                      text: '3',
-                      textColor: Colors.black,
-                      onPressed: _onButtonPressed),
-                  CalculatorButton(
-                      text: '-',
-                      textColor: Colors.black,
-                      onPressed: _onButtonPressed),
-                ],
-              ),
-              Row(
-                children: [
-                  CalculatorButton(
-                      text: '4',
-                      textColor: Colors.black,
-                      onPressed: _onButtonPressed),
-                  CalculatorButton(
-                      text: '5',
-                      textColor: Colors.black,
-                      onPressed: _onButtonPressed),
-                  CalculatorButton(
-                      text: '6',
-                      textColor: Colors.black,
-                      onPressed: _onButtonPressed),
-                  CalculatorButton(
-                      text: '+',
-                      textColor: Colors.black,
-                      onPressed: _onButtonPressed),
-                ],
-              ),
-              Row(
-                children: [
-                  Flexible(
-                    flex: 3,
-                    child: Column(
-                      children: [
-                        Row(
-                          children: [
-                            CalculatorButton(
-                                text: '7',
-                                textColor: Colors.black,
-                                onPressed: _onButtonPressed),
-                            CalculatorButton(
-                                text: '8',
-                                textColor: Colors.black,
-                                onPressed: _onButtonPressed),
-                            CalculatorButton(
-                                text: '9',
-                                textColor: Colors.black,
-                                onPressed: _onButtonPressed),
-                          ],
-                        ),
-                        Row(
-                          children: [
-                            CalculatorButton(
-                                text: '0',
-                                textColor: Colors.black,
-                                onPressed: _onButtonPressed),
-                            CalculatorButton(
-                                text: '00',
-                                textColor: Colors.black,
-                                onPressed: _onButtonPressed),
-                            CalculatorButton(
-                                text: '.',
-                                textColor: Colors.black,
-                                onPressed: _onButtonPressed),
-                          ],
-                        )
-                      ],
+    return MaterialApp(
+      debugShowCheckedModeBanner: false,
+      home: Scaffold(
+        appBar: AppBar(
+          backgroundColor: Colors.transparent,
+          elevation: 0,
+          centerTitle: true,
+          title: const Text('Calculator'),
+        ),
+        backgroundColor: const Color(0xFF0e2433),
+        body: Column(
+          children: [
+            Column(
+              children: [
+                Row(
+                  children: [
+                    CalculatorButton(
+                        text: 'v',
+                        onPressed: _onButtonPressed,
+                        btnColor: const Color(0xff0b344f)),
+                    CalculatorButton(
+                        text: 'c',
+                        onPressed: _onClearPressed,
+                        btnColor: const Color(0xff0b344f)),
+                    CalculatorButton(
+                        text: 'x',
+                        onPressed: _onButtonPressed,
+                        btnColor: const Color(0xff0b344f)),
+                    CalculatorButton(
+                        text: '/',
+                        onPressed: _onButtonPressed,
+                        btnColor: const Color(0xff0b344f)),
+                  ],
+                ),
+                Row(
+                  children: [
+                    CalculatorButton(
+                        text: '(',
+                        onPressed: _onButtonPressed,
+                        btnColor: const Color(0xff0b344f)),
+                    CalculatorButton(
+                        text: ')',
+                        onPressed: _onButtonPressed,
+                        btnColor: const Color(0xff0b344f)),
+                    CalculatorButton(
+                        text: '%',
+                        onPressed: _onButtonPressed,
+                        btnColor: const Color(0xff0b344f)),
+                    CalculatorButton(
+                        text: '*',
+                        onPressed: _onButtonPressed,
+                        btnColor: const Color(0xff0b344f)),
+                  ],
+                ),
+                Row(
+                  children: [
+                    CalculatorButton(
+                        text: '1',
+                        onPressed: _onButtonPressed,
+                        btnColor: const Color(0xff0b344f)),
+                    CalculatorButton(
+                        text: '2',
+                        onPressed: _onButtonPressed,
+                        btnColor: const Color(0xff0b344f)),
+                    CalculatorButton(
+                        text: '3',
+                        onPressed: _onButtonPressed,
+                        btnColor: const Color(0xff0b344f)),
+                    CalculatorButton(
+                        text: '-',
+                        onPressed: _onButtonPressed,
+                        btnColor: const Color(0xff0b344f)),
+                  ],
+                ),
+                Row(
+                  children: [
+                    CalculatorButton(
+                        text: '4',
+                        onPressed: _onButtonPressed,
+                        btnColor: const Color(0xff0b344f)),
+                    CalculatorButton(
+                        text: '5',
+                        onPressed: _onButtonPressed,
+                        btnColor: const Color(0xff0b344f)),
+                    CalculatorButton(
+                        text: '6',
+                        onPressed: _onButtonPressed,
+                        btnColor: const Color(0xff0b344f)),
+                    CalculatorButton(
+                        text: '+',
+                        onPressed: _onButtonPressed,
+                        btnColor: const Color(0xff0b344f)),
+                  ],
+                ),
+                Row(
+                  children: [
+                    Flexible(
+                      flex: 3,
+                      child: Column(
+                        children: [
+                          Row(
+                            children: [
+                              CalculatorButton(
+                                  text: '7',
+                                  onPressed: _onButtonPressed,
+                                  btnColor: const Color(0xff0b344f)),
+                              CalculatorButton(
+                                  text: '8',
+                                  onPressed: _onButtonPressed,
+                                  btnColor: const Color(0xff0b344f)),
+                              CalculatorButton(
+                                  text: '9',
+                                  onPressed: _onButtonPressed,
+                                  btnColor: const Color(0xff0b344f)),
+                            ],
+                          ),
+                          Row(
+                            children: [
+                              CalculatorButton(
+                                  text: '0',
+                                  onPressed: _onButtonPressed,
+                                  btnColor: const Color(0xff0b344f)),
+                              CalculatorButton(
+                                  text: '00',
+                                  onPressed: _onButtonPressed,
+                                  btnColor: const Color(0xff0b344f)),
+                              CalculatorButton(
+                                  text: '.',
+                                  onPressed: _onButtonPressed,
+                                  btnColor: const Color(0xff0b344f)),
+                            ],
+                          )
+                        ],
+                      ),
                     ),
-                  ),
-                  Expanded(
-                    child: CalculatorButton(
-                        text: '=',
-                        textColor: Colors.black,
-                        onPressed: _onButtonPressed),
-                  )
-                ],
-              )
-            ],
-          ),
-        ],
+                    Expanded(
+                      child: CalculatorButton(
+                          text: '=',
+                          onPressed: _onButtonPressed,
+                          btnColor: const Color(0xff296d98)),
+                    )
+                  ],
+                )
+              ],
+            ),
+          ],
+        ),
       ),
     );
   }
